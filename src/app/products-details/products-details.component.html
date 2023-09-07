@@ -1,0 +1,43 @@
+<div class="movie-ticket">
+  <div class="container-fluid">
+    <div class="ui-item">
+      <div class="ui-head">
+        <img src="https://img.freepik.com/premium-photo/yellow-gradient-background_64749-3725.jpg" alt=""
+          class="img-responsive bg-img" />
+        <div class="ui-trans clearfix">
+          <img src="{{selectedproduct.image }}" class="card-img-top" width="100px" alt="..." />
+
+          <div class="ui-details clearfix">
+            <h2>
+              <a href="#">{{ selectedproduct?.title }}</a>
+            </h2>
+
+            <p>
+              {{ selectedproduct?.overview }}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="ui-review">
+        <h3>{{ selectedproduct?.title }}</h3>
+
+        <p>
+          {{ selectedproduct?.overview }}
+        </p>
+
+        <!-- <div class="row">
+          <p
+            class="col badge bg-warning ourdisplay m-2"
+            *ngFor="let genre of moviesGenres"
+          >
+            {{ genre.name }}
+          </p>
+        </div> -->
+
+        <a href="#" class="ui-btn bg-red"><i class="fa fa-ticket"></i> Buy Tickets</a>
+        <a href="#" class="ui-btn bg-green"><i class="fa fa-dot-circle-o"></i> Buy DVDs</a>
+      </div>
+    </div>
+  </div>
+</div>

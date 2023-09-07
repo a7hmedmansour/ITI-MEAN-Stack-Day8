@@ -1,0 +1,23 @@
+<div class="row mt-5 ">
+</div>
+<div class="row">
+</div>
+<div class="row mt-4">
+  <div class="card col-lg-4 mx-2" *ngFor="let product of allproducts" style="width: 250px">
+    <a [routerLink]="['/productsdetails', product.id]">
+      <img src="{{ product.image }}" class="card-img-top" alt="..." />
+    </a>
+    <div class="card-body">
+      <h5 class="card-title">{{ product.title }}</h5>
+      <h6 class="card-title"> {{"Price "+ product.price }}</h6>
+      <h6 class="card-title"> {{"Rate "+ product.rating.rate }}</h6>
+      <p class="card-text" *ngIf="product.show">
+        {{ product.description }}
+      </p>
+      <button class="btn btn-primary">BUY</button>
+      <button class="btn btn-success" (click)="show_hideDeltials(product.id)">
+        {{product.show? 'Hide':'Show' }}DetailsDetails
+      </button>
+    </div>
+  </div>
+</div>
